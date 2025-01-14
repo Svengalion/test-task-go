@@ -1,4 +1,4 @@
-package dto
+package domain
 
 import "time"
 
@@ -11,4 +11,11 @@ type Song struct {
 	Link        string    `json:"link"`
 	CreatedAt   time.Time `json:"createdAt"`
 	UpdatedAt   time.Time `json:"updatedAt"`
+}
+
+type SongFilter struct {
+	Group    *string
+	Title    *string
+	Page     int
+	PageSize int
 }
